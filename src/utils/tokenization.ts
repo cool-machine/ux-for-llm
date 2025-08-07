@@ -98,7 +98,7 @@ export class TokenizationService {
         tokens: result.tokens,
         tokenIds: result.token_ids || [],
         tokenCount: result.tokens.length,
-        modelName: result.model_name || this.config.modelName,
+        modelName: result.model || this.config.modelName,
         tokenizedAt: new Date()
       };
 
