@@ -11,6 +11,11 @@ export class TokenizationService {
       azureFunctionUrl: import.meta.env.VITE_AZURE_TOKENIZER_URL || 'https://ocp10-tokenizer-function.azurewebsites.net/api/tokenizerfunction',
       apiKey: import.meta.env.VITE_AZURE_TOKENIZER_KEY
     };
+    
+    // Ensure we always use the correct Azure Function URL
+    if (!this.config.azureFunctionUrl || this.config.azureFunctionUrl === 'https://your-function-app.azurewebsites.net/api/tokenize') {
+      this.config.azureFunctionUrl = 'https://ocp10-tokenizer-function.azurewebsites.net/api/tokenizerfunction';
+    }
   }
 
   static getInstance(): TokenizationService {
