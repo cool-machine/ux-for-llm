@@ -7,7 +7,7 @@ export class TokenizationService {
   private constructor() {
     // Default configuration - can be overridden
     this.config = {
-      modelName: 'gpt-oss-120b',
+      modelName: 'gpt2',
       azureFunctionUrl: import.meta.env.VITE_AZURE_TOKENIZER_URL || 'https://ocp10-tokenizer-function.azurewebsites.net/api/tokenizerfunction',
       apiKey: import.meta.env.VITE_AZURE_TOKENIZER_KEY
     };

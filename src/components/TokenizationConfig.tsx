@@ -5,7 +5,7 @@ import { TokenizationConfigType } from '../types';
 
 export const TokenizationConfig: React.FC = () => {
   const [config, setConfig] = useState<TokenizationConfigType>({
-    modelName: 'gpt-oss-120b',
+    modelName: 'gpt2',
     azureFunctionUrl: '',
     apiKey: ''
   });
@@ -56,7 +56,7 @@ export const TokenizationConfig: React.FC = () => {
 
   const handleReset = () => {
     setConfig({
-      modelName: 'gpt-oss-120b',
+      modelName: 'gpt2',
       azureFunctionUrl: '',
       apiKey: ''
     });
@@ -94,7 +94,7 @@ export const TokenizationConfig: React.FC = () => {
                 type="text"
                 value={config.modelName}
                 onChange={(e) => setConfig(prev => ({ ...prev, modelName: e.target.value }))}
-                placeholder="e.g., gpt-oss-120b"
+                placeholder="e.g., gpt2"
                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm"
               />
               <p className="text-xs text-gray-500 mt-1">
