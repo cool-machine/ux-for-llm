@@ -23,3 +23,9 @@ dist-ssr
 *.sln
 *.sw?
 .env
+
+# Datasets and local virtualenvs
+public/datasets/
+.venv*
+scripts/.venv*
+scripts/__pycache__/
